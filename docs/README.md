@@ -1,5 +1,5 @@
 hdr-srn
-===================================
+=======
 
 Create an HDR image out of an exposure series and estimate the SNR of the sensor.
 
@@ -12,7 +12,7 @@ The initial goal was to create an HDR image out of an exposure series. This lead
 
 To obtain an HDR image out of an exposure series first the colors need to be transformed to a linear scale. This step depends on the encoding of the image.
 
-For the Raspberry Pi v2 camera using the Sony IMX219 sensor the RAW format is 10 bit linear encoded having values [0,1024). Black is not 0 but 64. There are two more tricky points:
+For the Raspberry Pi v2 camera using the Sony IMX219 sensor the RAW format is 10 bit linear encoded having values \[0,1024). Black is not 0 but 64. There are two more tricky points:
 
 1.  I found the exposure time reported is off by 16 &micro;s.
 2.  Very dark pixles do not have a high signal to noise ratio, therefore, I filtered out values below 2 to reduce clutter. Pixels encoded as 1023 are potentially overexposed, these I filtered out as well.
