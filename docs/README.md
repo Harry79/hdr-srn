@@ -5,7 +5,7 @@ hdr-srn
 
 The initial goal was to create an HDR image out of an exposure series. This lead to the idea of estimating the SNR of the sensor out of the exposure series. Which turned out to be possible with surprisingly low effort without requiring special equipment. The only requirement is an exposure series taken from a static scene using know exposure paramenters. Especially I have not found any resource documenting the approach proposed. This is why I decided to share the approach with you.
 
-<http:DxOMark.com> is a widely known resource for obtaining sensor characteristics of image sensor. A great resource for the characteristics of images sensors is <http:sensorgen.info>. However, both of them focus almost exclusively on high-level DSLR cameras. Finding similar figures for the Sony IMX219 is hopeless.
+<https://www.dxomark.com/> is a widely known resource for obtaining sensor characteristics of image sensor. A great resource for the characteristics of images sensors is <http://www.sensorgen.info/>. However, both of them focus almost exclusively on high-level DSLR cameras. Finding similar figures for the Sony IMX219 is hopeless.
 
 
 # RAW Format
