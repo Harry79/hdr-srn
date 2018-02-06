@@ -1,4 +1,6 @@
-# hdr-srn
+hdr-srn
+===================================
+
 Create an HDR image out of an exposure series and estimate the SNR of the sensor.
 
 The initial goal was to create an HDR image out of an exposure series. This lead to the idea of estimating the SNR of the sensor out of the exposure series. Which turned out to be possible with surprisingly low effort without requiring special equipment. The only requirement is an exposure series taken from a static scene using know exposure paramenters. Especially I have not found any resource documenting the approach proposed. This is why I decided to share the approach with you.
