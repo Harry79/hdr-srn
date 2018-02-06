@@ -3,7 +3,7 @@ Create an HDR image out of an exposure series and estimate the SNR of the sensor
 
 The initial goal was to create an HDR image out of an exposure series. This lead to the idea of estimating the SNR of the sensor out of the exposure series. Which turned out to be possible with surprisingly low effort without requiring special equipment. The only requirement is an exposure series taken from a static scene using know exposure paramenters. Especially I have not found any resource documenting the approach proposed. This is why I decided to share the approach with you.
 
-<DxOMark.com> is a widely known resource for obtaining sensor characteristics of image sensor. A great resource for the characteristics of images sensors is <sensorgen.info>. However, both of them focus almost exclusively on high-level DSLR cameras. Finding similar figures for the Sony IMX219 is hopeless.
+<http:DxOMark.com> is a widely known resource for obtaining sensor characteristics of image sensor. A great resource for the characteristics of images sensors is <http:sensorgen.info>. However, both of them focus almost exclusively on high-level DSLR cameras. Finding similar figures for the Sony IMX219 is hopeless.
 
 
 # RAW Format
@@ -15,7 +15,7 @@ For the Raspberry Pi v2 camera using the Sony IMX219 sensor the RAW format is 10
 1.  I found the exposure time reported is off by 16 &micro;s.
 2.  Very dark pixles do not have a high signal to noise ratio, therefore, I filtered out values below 2 to reduce clutter. Pixels encoded as 1023 are potentially overexposed, these I filtered out as well.
 
-Taking these points into account the histograms of the different exposures align pretty well, see Figure [9](#orgc255f29). I highlighted the histogram of one of the images as a bold black line without filtering out any values. On the right one can see the overexposed pixel count sums up to a value outside the diagram. The sum of the underexposed pixels cannot be read from the diagram since we have a logarithmic scale on the x-axis.
+Taking these points into account the histograms of the different exposures align pretty well, see Figure below. I highlighted the histogram of one of the images as a bold black line without filtering out any values. On the right one can see the overexposed pixel count sums up to a value outside the diagram. The sum of the underexposed pixels cannot be read from the diagram since we have a logarithmic scale on the x-axis.
 
 ![img](blacklevel-adj4-linear.svg "Histograms of images aligned.")
 
@@ -39,7 +39,6 @@ This Figure shows the SNR based on the noise and the fitted model.
 
 # Improving the estimates
 
-Using the SNR model we just obtained we redo the HDR image creation and the SNR estimation. After some iteration we obtain a reasonable estimate of the SNR: \(G = 10771.7\), \(r=5.74783\), \(p=0.0345259\).
+Using the SNR model we just obtained we redo the HDR image creation and the SNR estimation. After some iterations we obtain a reasonable estimate of the SNR: \(G = 10771.7\), \(r=5.74783\), \(p=0.0345259\).
 
 ![img](rpisnr-100-newsnr6th.svg)
-
