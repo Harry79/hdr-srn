@@ -41,6 +41,6 @@ This Figure shows the SNR based on the noise and the fitted model.
 
 # Improving the estimates
 
-Using the SNR model we just obtained we redo the HDR image creation and the SNR estimation. After some iterations we obtain a reasonable estimate of the SNR: \(G = 10771.7\), \(r=5.74783\), \(p=0.0345259\).
+Using the SNR model we just obtained we redo the HDR image creation and the SNR estimation. After some iterations we obtain a reasonable estimate of the SNR: \(G = 11613.6\), \(r=7.02467\), \(p=0.0342391\).
 
 ![img](rpisnr-100-newsnr6th.svg)
